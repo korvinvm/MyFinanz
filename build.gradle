@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/org.webjars.npm/gregorian-calendar
+    implementation group: 'org.webjars.npm', name: 'gregorian-calendar', version: '4.1.0'
+
+//    // https://mvnrepository.com/artifact/org.javamoney/moneta
+//    implementation group: 'org.javamoney', name: 'moneta', version: '1.4.2', ext: 'pom'
+    // https://mvnrepository.com/artifact/org.javamoney/moneta
+    implementation 'org.javamoney:moneta:1.4.2'
+
+//    // https://mvnrepository.com/artifact/org.joda/joda-money
+//    runtimeOnly group: 'org.joda', name: 'joda-money', version: '1.0.1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
